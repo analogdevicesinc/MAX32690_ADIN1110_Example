@@ -1,0 +1,13 @@
+"C:\Program Files\IAR Systems\Embedded Workbench 9.1\arm\bin\armPROC.dll" 
+
+"C:\Program Files\IAR Systems\Embedded Workbench 9.1\arm\bin\armJET.dll" 
+
+"C:\AnalogDevices\ADIN1110DeviceDriver-Online2\examples\adin1110\lwIPExample\MAX32690\Project\Debug (OA SPI)\Exe\lwIPExample.out" 
+
+--plugin="C:\Program Files\IAR Systems\Embedded Workbench 9.1\arm\bin\armbat.dll" 
+
+--flash_loader="C:/Users/lsmith/IAR-CMSIS-Packs/Maxim/MAX32690/1.0.1/\.iar\config\flashloader\MAX32690.board" 
+
+
+
+

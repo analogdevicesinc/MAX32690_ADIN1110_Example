@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<configuration xmlns:xs="http://www.w3.org/2001/XMLSchema-instance">
+  <packages/>
+  <device Dclock="96000000" Dcore="Cortex-M4" DcoreVersion="r0p1" Dendian="Little-endian" Dfamily="MAX32690 family" Dfpu="SP_FPU" Dmpu="NO_MPU" Dname="MAX32690" Dvendor="Maxim:23" Pname="Cortex-M4" Punits="2" info="ARM , 128 KB RAM, 512 KB ROM" url="https://www.keil.com/dd2/maxim/max32690">
+    <package info="Maxim Integrated MAX32690 Series Device Support, Board Support Package and Examples" name="MAX32690" url="https://www.mxim.net/microcontroller/pack/" vendor="Maxim" version="1.0.1"/>
+  </device>
+  <toolchain Tcompiler="IAR" Toutput="exe"/>
+  <components>
+    <component Cbundle="MAX32690 BSP" Cbundleversion="1.0.1" Cclass="BSP" Cgroup="EvKit V1" Cvendor="Maxim" Cversion="1.0.1" deviceDependent="1">
+      <package name="MAX32690" url="https://www.mxim.net/microcontroller/pack/" vendor="Maxim" version="1.0.1"/>
+      <file category="include" deviceDependent="1" name="Libraries/Boards/MAX32690/EvKit_V1/Include/" version="1.0.1"/>
+      <file category="sourceC" deviceDependent="1" name="Libraries/Boards/MAX32690/EvKit_V1/Source/board.c" version="1.0.1"/>
+      <file category="include" deviceDependent="1" name="Libraries/Boards/MAX32690/Include/" version="1.0.1"/>
+      <file category="sourceC" deviceDependent="1" name="Libraries/Boards/MAX32690/Source/led.c" version="1.0.1"/>
+      <file category="sourceC" deviceDependent="1" name="Libraries/Boards/MAX32690/Source/pb.c" version="1.0.1"/>
+      <file category="sourceC" deviceDependent="1" name="Libraries/Boards/MAX32690/Source/stdio.c" version="1.0.1"/>
+    </component>
+    <component Cclass="CMSIS" Cgroup="CORE" Cvendor="ARM" Cversion="5.6.0">
+      <package name="CMSIS" url="http://www.keil.com/pack/" vendor="ARM" version="5.9.0"/>
+      <file category="doc" name="CMSIS/Documentation/Core/html/index.html"/>
+      <file category="include" name="CMSIS/Core/Include/"/>
+      <file category="header" condition="TrustZone" name="CMSIS/Core/Include/tz_context.h"/>
+      <file attr="template" category="sourceC" condition="TZ Secure" name="CMSIS/Core/Template/ARMv8-M/main_s.c" select="Secure mode 'main' module for ARMv8-M" version="1.1.1"/>
+      <file attr="template" category="sourceC" condition="TZ Secure" name="CMSIS/Core/Template/ARMv8-M/tz_context.c" select="RTOS Context Management (TrustZone for ARMv8-M)" version="1.1.1"/>
+    </component>
+    <component Cbundle="Maxim API" Cbundleversion="1.0.1" Cclass="Device" Cgroup="DMA" Cvendor="Maxim" Cversion="1.0.1" deviceDependent="1">
+      <package name="MAX32690" url="https://www.mxim.net/microcontroller/pack/" vendor="Maxim" version="1.0.1"/>
+      <file category="sourceC" deviceDependent="1" name="Libraries/PeriphDrivers/Source/DMA/dma_me18.c" version="1.0.1"/>
+      <file category="sourceC" deviceDependent="1" name="Libraries/PeriphDrivers/Source/DMA/dma_reva.c" version="1.0.1"/>
+    </component>
+    <component Cbundle="Maxim API" Cbundleversion="1.0.1" Cclass="Device" Cgroup="GPIO" Cvendor="Maxim" Cversion="1.0.1" deviceDependent="1">
+      <package name="MAX32690" url="https://www.mxim.net/microcontroller/pack/" vendor="Maxim" version="1.0.1"/>
+      <file category="sourceC" deviceDependent="1" name="Libraries/PeriphDrivers/Source/GPIO/gpio_me18.c" version="1.0.1"/>
+      <file category="sourceC" deviceDependent="1" name="Libraries/PeriphDrivers/Source/GPIO/gpio_reva.c" version="1.0.1"/>
+      <file category="sourceC" deviceDependent="1" name="Libraries/PeriphDrivers/Source/GPIO/gpio_common.c" version="1.0.1"/>
+    </component>
+    <component Cbundle="Maxim API" Cbundleversion="1.0.1" Cclass="Device" Cgroup="ICC" Cvendor="Maxim" Cversion="1.0.1" deviceDependent="1">
+      <package name="MAX32690" url="https://www.mxim.net/microcontroller/pack/" vendor="Maxim" version="1.0.1"/>
+      <file category="sourceC" deviceDependent="1" name="Libraries/PeriphDrivers/Source/ICC/icc_me18.c" version="1.0.1"/>
+      <file category="sourceC" deviceDependent="1" name="Libraries/PeriphDrivers/Source/ICC/icc_reva.c" version="1.0.1"/>
+    </component>
+    <component Cbundle="Maxim API" Cbundleversion="1.0.1" Cclass="Device" Cgroup="RTC" Cvendor="Maxim" Cversion="1.0.1" deviceDependent="1">
+      <package name="MAX32690" url="https://www.mxim.net/microcontroller/pack/" vendor="Maxim" version="1.0.1"/>
+      <file category="sourceC" deviceDependent="1" name="Libraries/PeriphDrivers/Source/RTC/rtc_me18.c" version="1.0.1"/>
+      <file category="sourceC" deviceDependent="1" name="Libraries/PeriphDrivers/Source/RTC/rtc_reva.c" version="1.0.1"/>
+    </component>
+    <component Cbundle="Maxim API" Cbundleversion="1.0.1" Cclass="Device" Cgroup="SPI" Cvendor="Maxim" Cversion="1.0.1" deviceDependent="1">
+      <package name="MAX32690" url="https://www.mxim.net/microcontroller/pack/" vendor="Maxim" version="1.0.1"/>
+      <file category="sourceC" deviceDependent="1" name="Libraries/PeriphDrivers/Source/SPI/spi_me18.c" version="1.0.1"/>
+      <file category="sourceC" deviceDependent="1" name="Libraries/PeriphDrivers/Source/SPI/spi_reva.c" version="1.0.1"/>
+    </component>
+    <component Cbundle="Maxim API" Cbundleversion="1.0.1" Cclass="Device" Cgroup="Startup" Cvendor="Maxim" Cversion="1.0.1" deviceDependent="1">
+      <package name="MAX32690" url="https://www.mxim.net/microcontroller/pack/" vendor="Maxim" version="1.0.1"/>
+      <file category="include" deviceDependent="1" name="Libraries/CMSIS/Device/Maxim/MAX32690/Include/" version="1.0.1"/>
+      <file category="include" deviceDependent="1" name="Libraries/PeriphDrivers/Include/MAX32690/" version="1.0.1"/>
+      <file category="include" deviceDependent="1" name="Libraries/PeriphDrivers/Source/ADC/" version="1.0.1"/>
+      <file category="include" deviceDependent="1" name="Libraries/PeriphDrivers/Source/AES/" version="1.0.1"/>
+      <file category="include" deviceDependent="1" name="Libraries/PeriphDrivers/Source/CRC/" version="1.0.1"/>
+      <file category="include" deviceDependent="1" name="Libraries/PeriphDrivers/Source/DMA/" version="1.0.1"/>
+      <file category="include" deviceDependent="1" name="Libraries/PeriphDrivers/Source/FLC/" version="1.0.1"/>
+      <file category="include" deviceDependent="1" name="Libraries/PeriphDrivers/Source/GPIO/" version="1.0.1"/>
+      <file category="include" deviceDependent="1" name="Libraries/PeriphDrivers/Source/I2C/" version="1.0.1"/>
+      <file category="include" deviceDependent="1" name="Libraries/PeriphDrivers/Source/I2S/" version="1.0.1"/>
+      <file category="include" deviceDependent="1" name="Libraries/PeriphDrivers/Source/ICC/" version="1.0.1"/>
+      <file category="include" deviceDependent="1" name="Libraries/PeriphDrivers/Source/LP/" version="1.0.1"/>
+      <file category="include" deviceDependent="1" name="Libraries/PeriphDrivers/Source/RTC/" version="1.0.1"/>
+      <file category="include" deviceDependent="1" name="Libraries/PeriphDrivers/Source/SPI/" version="1.0.1"/>
+      <file category="include" deviceDependent="1" name="Libraries/PeriphDrivers/Source/SPIXF/" version="1.0.1"/>
+      <file category="include" deviceDependent="1" name="Libraries/PeriphDrivers/Source/SPIXR/" version="1.0.1"/>
+      <file category="include" deviceDependent="1" name="Libraries/PeriphDrivers/Source/SYS/" version="1.0.1"/>
+      <file category="include" deviceDependent="1" name="Libraries/PeriphDrivers/Source/TMR/" version="1.0.1"/>
+      <file category="include" deviceDependent="1" name="Libraries/PeriphDrivers/Source/TRNG/" version="1.0.1"/>
+      <file category="include" deviceDependent="1" name="Libraries/PeriphDrivers/Source/UART/" version="1.0.1"/>
+      <file category="include" deviceDependent="1" name="Libraries/PeriphDrivers/Source/WDT/" version="1.0.1"/>
+      <file category="include" deviceDependent="1" name="Libraries/PeriphDrivers/Source/WUT/" version="1.0.1"/>
+      <file category="include" deviceDependent="1" name="Libraries/PeriphDrivers/Source/PT/" version="1.0.1"/>
+      <file category="include" deviceDependent="1" name="Libraries/PeriphDrivers/Source/CTB/" version="1.0.1"/>
+      <file category="include" deviceDependent="1" name="Libraries/PeriphDrivers/Source/CAN/" version="1.0.1"/>
+      <file category="include" deviceDependent="1" name="Libraries/PeriphDrivers/Source/LPCMP/" version="1.0.1"/>
+      <file attr="config" category="sourceAsm" condition="Startup IAR" deviceDependent="1" name="Libraries/CMSIS/Device/Maxim/MAX32690/Source/IAR/startup_max32690.s" version="1.0.1"/>
+      <file attr="config" category="sourceC" condition="Startup IAR" deviceDependent="1" name="Libraries/CMSIS/Device/Maxim/MAX32690/Source/IAR/low_level_init.c" version="1.0.1"/>
+      <file attr="config" category="sourceAsm" condition="Startup IAR" deviceDependent="1" name="Libraries/CMSIS/Device/Maxim/MAX32690/Source/IAR/cmain.s" version="1.0.1"/>
+      <file attr="config" category="sourceC" condition="Startup IAR" deviceDependent="1" name="Libraries/CMSIS/Device/Maxim/MAX32690/Source/IAR/heap.c" version="1.0.1"/>
+      <file attr="config" category="sourceC" deviceDependent="1" name="Libraries/CMSIS/Device/Maxim/MAX32690/Source/system_max32690.c" version="1.0.1"/>
+      <file category="sourceC" deviceDependent="1" name="Libraries/PeriphDrivers/Source/SYS/nvic_table.c" version="1.0.1"/>
+      <file attr="config" category="header" deviceDependent="1" name="Libraries/CMSIS/Device/Maxim/MAX32690/Include/max32690.h" version="1.0.1"/>
+      <file category="sourceC" deviceDependent="1" name="Libraries/PeriphDrivers/Source/SYS/mxc_assert.c" version="1.0.1"/>
+      <file category="sourceC" deviceDependent="1" name="Libraries/PeriphDrivers/Source/SYS/mxc_delay.c" version="1.0.1"/>
+      <file category="sourceC" deviceDependent="1" name="Libraries/PeriphDrivers/Source/SYS/mxc_lock.c" version="1.0.1"/>
+      <file category="sourceC" deviceDependent="1" name="Libraries/PeriphDrivers/Source/SYS/pins_me18.c" version="1.0.1"/>
+      <file category="sourceC" deviceDependent="1" name="Libraries/PeriphDrivers/Source/SYS/sys_me18.c" version="1.0.1"/>
+      <file category="sourceC" deviceDependent="1" name="Libraries/PeriphDrivers/Source/SYS/nvic_table.c" version="1.0.1"/>
+    </component>
+    <component Cbundle="Maxim API" Cbundleversion="1.0.1" Cclass="Device" Cgroup="SYS" Cvendor="Maxim" Cversion="1.0.1" deviceDependent="1">
+      <package name="MAX32690" url="https://www.mxim.net/microcontroller/pack/" vendor="Maxim" version="1.0.1"/>
+      <file category="sourceC" deviceDependent="1" name="Libraries/PeriphDrivers/Source/SYS/sys_me18.c" version="1.0.1"/>
+      <file category="sourceC" deviceDependent="1" name="Libraries/PeriphDrivers/Source/SYS/pins_me18.c" version="1.0.1"/>
+      <file category="sourceC" deviceDependent="1" name="Libraries/PeriphDrivers/Source/SYS/nvic_table.c" version="1.0.1"/>
+      <file category="sourceC" deviceDependent="1" name="Libraries/PeriphDrivers/Source/SYS/mxc_lock.c" version="1.0.1"/>
+      <file category="sourceC" deviceDependent="1" name="Libraries/PeriphDrivers/Source/SYS/mxc_delay.c" version="1.0.1"/>
+      <file category="sourceC" deviceDependent="1" name="Libraries/PeriphDrivers/Source/SYS/mxc_assert.c" version="1.0.1"/>
+    </component>
+    <component Cbundle="Maxim API" Cbundleversion="1.0.1" Cclass="Device" Cgroup="Timers" Cvendor="Maxim" Cversion="1.0.1" deviceDependent="1">
+      <package name="MAX32690" url="https://www.mxim.net/microcontroller/pack/" vendor="Maxim" version="1.0.1"/>
+      <file category="sourceC" deviceDependent="1" name="Libraries/PeriphDrivers/Source/TMR/tmr_me18.c" version="1.0.1"/>
+      <file category="sourceC" deviceDependent="1" name="Libraries/PeriphDrivers/Source/TMR/tmr_revb.c" version="1.0.1"/>
+      <file category="sourceC" deviceDependent="1" name="Libraries/PeriphDrivers/Source/TMR/tmr_common.c" version="1.0.1"/>
+    </component>
+    <component Cbundle="Maxim API" Cbundleversion="1.0.1" Cclass="Device" Cgroup="UART" Cvendor="Maxim" Cversion="1.0.1" deviceDependent="1">
+      <package name="MAX32690" url="https://www.mxim.net/microcontroller/pack/" vendor="Maxim" version="1.0.1"/>
+      <file category="sourceC" deviceDependent="1" name="Libraries/PeriphDrivers/Source/UART/uart_me18.c" version="1.0.1"/>
+      <file category="sourceC" deviceDependent="1" name="Libraries/PeriphDrivers/Source/UART/uart_revb.c" version="1.0.1"/>
+      <file category="sourceC" deviceDependent="1" name="Libraries/PeriphDrivers/Source/UART/uart_common.c" version="1.0.1"/>
+    </component>
+  </components>
+  <apis/>
+</configuration>
