@@ -10,7 +10,7 @@ This repository provides hardware abstraction (HAL) code that interfaces the MAX
 * Obtain an [EVAL-ADIN1100EBZ board](https://www.analog.com/en/design-center/evaluation-hardware-and-software/evaluation-boards-kits/eval-adin1100.html).
 * Obtain a MAX32690 EV Kit board.
 
-## Instructions
+## Running the Example
 
 1. Connect the **+**, **-**, and **SH** signals on connector P101 of the EVAL-ADIN1110EBZ board to the **+**, **-**, and **SH** signals on connector P101 of the EVAL-ADIN1100EBZ board.
 2. On the EVAL-ADIN1110EBZ board:
@@ -76,7 +76,8 @@ When building this HAL for a specific board, the code must be made aware of whic
 | CFG_SPI_CLOCK_HIGH*          | [0-255]     | The number of peripheral clocks to use for the SPI clock high time. |
 | CFG_SPI_RX_THRESHOLD         | [0-31]      | When the SPI RX FIFO count exceeds this value, an interrupt (or DMA transaction) will occur. |
 | CFG_SPI_TX_THRESHOLD         | [0-31]      | When the SPI TX FIFO count equals or falls below this value, an interrupt (or DMA transaction) will occur. |
-* The SPI clock rate is determined by the following equation:
-SPI_CLOCK_RATE = PCLOCK_FREQ / (2 + CFG_SPI_CLOCK_LOW + CFG_SPI_CLOCK_HIGH)
-PCLOCK_FREQ = SYSTEM_CLOCK_FREQ / 2 for SPI instances 0-2.
-PCLOCK_FREQ = SYTEMM_CLOCK_FREQ for SPI instances 3-4.
+
+\* The SPI clock rate is determined by the following equations:\
+SPI_CLOCK_RATE = PCLOCK_FREQ / (2 + CFG_SPI_CLOCK_LOW + CFG_SPI_CLOCK_HIGH)\
+PCLOCK_FREQ = SYSTEM_CLOCK_FREQ / 2 for SPI instances 0-2.\
+PCLOCK_FREQ = SYTEMM_CLOCK_FREQ for SPI instances 3-4.\
