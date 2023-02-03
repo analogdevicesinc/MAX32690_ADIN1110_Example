@@ -20,7 +20,8 @@ This repository provides hardware abstraction (HAL) code that interfaces the MAX
     * Place switch #4 of S201 in the ON positions.  Place the remaining switches in the OFF position.
     * Place all four switches of S403 in the OFF position.
     * Connect an Ethernet cable (at P301) to a test network.
-4. Connect the MAX32690 EV Kit board to the EVAL-ADIN1110EBZ board.
+4. On the MAX32690 EV Kit remove resistors R73 through R76.  This disconnects the on-board audio codec that is on the same SPI bus used in this example.
+5. Connect the MAX32690 EV Kit board to the EVAL-ADIN1110EBZ board.
 
 | **Signal**          | **MAX32690 EV Kit Connector** | **VAL-ADIN1110EBZ Connector** |
 |---------------------|:-----------------------------:|:-----------------------------:|
@@ -32,13 +33,13 @@ This repository provides hardware abstraction (HAL) code that interfaces the MAX
 | ADIN1110 INT        | P0.7 (JH1.2)                  | INT_T (P402.2)                |
 | ADIN1110 RESET      | p0.8 (JH1.3)                  | RESET_N (P402.4)              |
 
-5. Connect the CMSIS-DAP adapter to the MAX32690 EV Kit board (Connector J3).
-6. Provide power to all boards.
-7. Copy the contents of [this GitHub repository](https://github.com/Analog-Devices-MSDK/MAX32690_ADIN1110_Example) to the same location that the **ADIN1110 Non Operating System Driver** was installed.
-8. Start IAR's Embedded Workbench
-9. Select *File->Open Workspace* and open the <ADIN1110DeviceDriverInstall>\examples\adin1110\lwIPExample\MAX32690\lwIPExample.eww file.
-10. Build, download, and run the lwIPExample project.
-11. On the test network, open a browser and enter the IP address assigned to the ADIN1110. *(TODO: provide instructions for determining the IP address)*
+6. Connect the CMSIS-DAP adapter to the MAX32690 EV Kit board (Connector J3).
+7. Provide power to all boards.
+8. Copy the contents of [this GitHub repository](https://github.com/Analog-Devices-MSDK/MAX32690_ADIN1110_Example) to the same location that the **ADIN1110 Non Operating System Driver** was installed.
+9. Start IAR's Embedded Workbench
+10. Select *File->Open Workspace* and open the <ADIN1110DeviceDriverInstall>\examples\adin1110\lwIPExample\MAX32690\lwIPExample.eww file.
+11. Build, download, and run the lwIPExample project.
+12. On the test network, open a browser and enter the IP address assigned to the ADIN1110. *(TODO: provide instructions for determining the IP address)*
 
 ## Files Included in This Repository
 * [examples/adin1110/lwIPExample/MAX32690](./examples/adin1110/lwIPExample/MAX32690) - IAR specific project and workspace files
