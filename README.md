@@ -15,12 +15,16 @@ This repository provides hardware abstraction (HAL) code that interfaces the MAX
 1. Connect the **+**, **-**, and **SH** signals on connector P101 of the EVAL-ADIN1110EBZ board to the **+**, **-**, and **SH** signals on connector P101 of the EVAL-ADIN1100EBZ board.
 2. On the EVAL-ADIN1110EBZ board:
     * Move the shunt on jumper J301 to position 1-2 (GND) to hold the onboard microcontroller in reset.
+    * Move the shunt on jumper J302 to position 1-2 (3.3V) to ensure the communication signals are at the correct voltage level.
     * Place all five switches of S201 in the OFF position.
+example and will interfere with the SPI communucation if not removed.)
 3. On the EVAL-ADIN1100EBZ board:
     * Place switch #4 of S201 in the ON positions.  Place the remaining switches in the OFF position.
     * Place all four switches of S403 in the OFF position.
     * Connect an Ethernet cable (at P301) to a test network.
-4. On the MAX32690 EV Kit remove resistors R73 through R76.  This disconnects the on-board audio codec that is on the same SPI bus used in this example.
+4. On the MAX32690 EV Kit discconnect the the on-board audio codec that is using the signals required by the SPI bus used in this example.  This can be done by removing a few resistors on the board:
+   * If your board is revision A, remove R73 through R76.
+   * If your board is revision B or C, remove R70 through R73.
 5. Connect the MAX32690 EV Kit board to the EVAL-ADIN1110EBZ board.
 
 | **Signal**          | **MAX32690 EV Kit Connector** | **VAL-ADIN1110EBZ Connector** |
